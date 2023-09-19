@@ -1,5 +1,5 @@
 import csv
-ruta='/Users/Fa/Desktop/Proyecto01/proyecto/src/archivos/datos_ciudades/dataset1.csv' #ruta donde esta ubicado el archivo
+ruta='/Users/Fa/Downloads/Proyecto1-Modelado/Proyecto01/proyecto/src/archivos/datos_ciudades/dataset1.csv' #ruta donde esta ubicado el archivo
 with open(ruta, newline='') as archivo:
   #Permite obtener los datos del archivo csv línea por línea.
   csv_leer= csv.DictReader(archivo)

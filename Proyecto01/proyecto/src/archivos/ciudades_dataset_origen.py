@@ -21,8 +21,8 @@ def clima_ciudades_origen():
     descripcion = datos_clima_1[0]["description"] #Se crea una variable para guardar los descripcion del clima
     #Muestra en consola los datos de la ciudad de destino ingresada por el usuario e imprime las variables anteriores
     print("Ciudad de origen:")
-    print(" Temperatura(Celsius) = " + str(temperatura) + "\n Presión atmosferica= " + str(presion) +
-          "\n Humedad(en porcentaje) = " + str(humedad) + "\n Descripción = " + str(descripcion) +
+    print(" Temperatura(Celsius) = " + str(temperatura) + "\n Presion atmosferica= " + str(presion) +
+          "\n Humedad(en porcentaje) = " + str(humedad) + "\n Descripcion = " + str(descripcion) +
           "\n Latitud = " + origen_latitud + "\n Longitud = " +origen_longitud)
   else:
-    print(" No se encontró la ciudad ")
+    print(" No se encontro la ciudad ")
