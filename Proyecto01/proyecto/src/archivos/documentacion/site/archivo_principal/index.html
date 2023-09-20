@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Archivo Principal - Documentación</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Documentación</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Archivo Principal</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ciudad_dataset_destino/" class="nav-link">Ciudad Dataset Destino</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ciudad_dataset_origen/" class="nav-link">Ciudad Dataset Origen</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../hora/" class="nav-link">Hora</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../leer_csv/" class="nav-link">Leer CSV</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ciudad_dataset_destino/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#documentacion-del-programa-de-pronostico-del-clima-con-imagen" class="nav-link">Documentación del Programa de Pronóstico del Clima con Imagen</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#modulos-importados" class="nav-link">Módulos Importados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#funcion-imagen_terminal" class="nav-link">Función imagen_terminal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ejecucion-principal" class="nav-link">Ejecución Principal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ejemplo-de-uso" class="nav-link">Ejemplo de Uso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#importar-los-modulos" class="nav-link">Importar los módulos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#definir-la-funcion-imagen_terminal-y-su-comportamiento" class="nav-link">Definir la función imagen_terminal y su comportamiento</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">...</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#llamar-a-imagen_terminal-para-mostrar-una-imagen-en-la-terminal" class="nav-link">Llamar a imagen_terminal para mostrar una imagen en la terminal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#llamar-a-ciudades_dataset_origenclima_ciudades_origen-para-obtener-el-clima-de-ciudades-de-origen" class="nav-link">Llamar a ciudades_dataset_origen.clima_ciudades_origen para obtener el clima de ciudades de origen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#imprimir-una-linea-de-separacion" class="nav-link">Imprimir una línea de separación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#llamar-a-ciudad_dataset_destinoclima_ciudades_destino-para-obtener-el-clima-de-ciudades-de-destino" class="nav-link">Llamar a ciudad_dataset_destino.clima_ciudades_destino para obtener el clima de ciudades de destino</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentacion-del-programa-de-pronostico-del-clima-con-imagen">Documentación del Programa de Pronóstico del Clima con Imagen</h1>
+<p>Este programa utiliza la API de OpenWeather para proporcionar información sobre el clima de diferentes ciudades. Además, muestra una imagen en la terminal.</p>
+<h2 id="modulos-importados">Módulos Importados</h2>
+<ul>
+<li><code>climage</code>: Módulo para manejar la conversión de imágenes.</li>
+<li><code>csv</code>: Módulo para trabajar con archivos CSV.</li>
+<li><code>ciudad_dataset_destino</code> y <code>ciudades_dataset_origen</code>: Módulos propios para obtener datos de las ciudades.</li>
+<li><code>hora</code>: Módulo propio para manejar el tiempo.</li>
+</ul>
+<h2 id="funcion-imagen_terminal">Función <code>imagen_terminal</code></h2>
+<h3 id="descripcion">Descripción</h3>
+<p>La función <code>imagen_terminal</code> se encarga de cargar una imagen desde una ruta específica y mostrarla en la terminal.</p>
+<h3 id="parametros">Parámetros</h3>
+<p>Ninguno.</p>
+<h3 id="comportamiento">Comportamiento</h3>
+<ol>
+<li>La función toma la ruta de la imagen desde una ubicación específica.</li>
+<li>Luego, utiliza el módulo <code>climage</code> para cargar y convertir la imagen.</li>
+<li>Finalmente, muestra la imagen en la terminal.</li>
+</ol>
+<h2 id="ejecucion-principal">Ejecución Principal</h2>
+<p>El programa principal realiza las siguientes acciones:</p>
+<ol>
+<li>Llama a <code>imagen_terminal</code> para mostrar una imagen en la terminal.</li>
+<li>Llama a <code>ciudades_dataset_origen.clima_ciudades_origen</code> para obtener y mostrar el pronóstico del clima de ciudades de origen.</li>
+<li>Imprime una línea para separar el texto.</li>
+<li>Llama a <code>ciudad_dataset_destino.clima_ciudades_destino</code> para obtener y mostrar el pronóstico del clima de ciudades de destino.</li>
+</ol>
+<h2 id="ejemplo-de-uso">Ejemplo de Uso</h2>
+<p>```python</p>
+<h1 id="importar-los-modulos">Importar los módulos</h1>
+<p>import climage
+import csv
+import ciudad_dataset_destino
+import ciudades_dataset_origen
+from hora import *</p>
+<h1 id="definir-la-funcion-imagen_terminal-y-su-comportamiento">Definir la función imagen_terminal y su comportamiento</h1>
+<h1 id="_1">...</h1>
+<h1 id="llamar-a-imagen_terminal-para-mostrar-una-imagen-en-la-terminal">Llamar a imagen_terminal para mostrar una imagen en la terminal</h1>
+<p>imagen_terminal()</p>
+<h1 id="llamar-a-ciudades_dataset_origenclima_ciudades_origen-para-obtener-el-clima-de-ciudades-de-origen">Llamar a ciudades_dataset_origen.clima_ciudades_origen para obtener el clima de ciudades de origen</h1>
+<p>ciudades_dataset_origen.clima_ciudades_origen()</p>
+<h1 id="imprimir-una-linea-de-separacion">Imprimir una línea de separación</h1>
+<p>print('--------------------------------------------------')</p>
+<h1 id="llamar-a-ciudad_dataset_destinoclima_ciudades_destino-para-obtener-el-clima-de-ciudades-de-destino">Llamar a ciudad_dataset_destino.clima_ciudades_destino para obtener el clima de ciudades de destino</h1>
+<p>ciudad_dataset_destino.clima_ciudades_destino()</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

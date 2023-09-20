@@ -1,0 +1,8 @@
+site_name: Documentación
+nav:
+  - Home: index.md
+  - Archivo Principal: archivo_principal.md
+  - Ciudad Dataset Destino: ciudad_dataset_destino.md
+  - Ciudad Dataset Origen: ciudad_dataset_origen.md
+  - Hora: hora.md
+  - Leer CSV: leer_csv.md

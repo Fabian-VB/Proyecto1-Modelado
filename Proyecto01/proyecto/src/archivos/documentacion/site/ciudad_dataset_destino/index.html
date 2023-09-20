@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Ciudad Dataset Destino - Documentación</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Documentación</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../archivo_principal/" class="nav-link">Archivo Principal</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Ciudad Dataset Destino</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../ciudad_dataset_origen/" class="nav-link">Ciudad Dataset Origen</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../hora/" class="nav-link">Hora</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../leer_csv/" class="nav-link">Leer CSV</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../archivo_principal/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ciudad_dataset_origen/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#programa-para-proporcionar-el-clima-de-diferentes-ciudades" class="nav-link">Programa para proporcionar el clima de diferentes ciudades</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configuracion-de-la-clave-api" class="nav-link">Configuración de la clave API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#uso" class="nav-link">Uso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#funciones" class="nav-link">Funciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#importar-los-modulos" class="nav-link">Importar los módulos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#definir-api_key-url-y-ciudad_dest" class="nav-link">Definir api_key, url y ciudad_dest</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#realizar-una-solicitud-http-para-obtener-los-datos-del-clima" class="nav-link">Realizar una solicitud HTTP para obtener los datos del clima</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#llamar-a-la-funcion-para-mostrar-el-clima-de-la-ciudad-de-destino" class="nav-link">Llamar a la función para mostrar el clima de la ciudad de destino</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="programa-para-proporcionar-el-clima-de-diferentes-ciudades">Programa para proporcionar el clima de diferentes ciudades</h1>
+<p>Este programa utiliza la API de OpenWeather para proporcionar información sobre el clima de diversas ciudades. El usuario puede ingresar una ciudad de destino y obtener datos como temperatura, presión, humedad, descripción del clima, amanecer y puesta de sol.</p>
+<h2 id="configuracion-de-la-clave-api">Configuración de la clave API</h2>
+<p>El programa primero verifica si existe un archivo <code>llave_api.txt</code> para obtener la clave API de OpenWeather. Si el archivo no existe, se utiliza una clave API predeterminada.</p>
+<h2 id="uso">Uso</h2>
+<p>Para utilizar el programa, sigue estos pasos:</p>
+<ol>
+<li>Ejecuta el programa en tu terminal.</li>
+<li>Si existe el archivo <code>llave_api.txt</code>, la clave API se leerá desde ese archivo. De lo contrario, se utilizará la clave API predeterminada.</li>
+<li>Ingresa la ciudad de destino cuando se te solicite.</li>
+<li>El programa consultará la API de OpenWeather y mostrará los datos del clima de la ciudad.</li>
+</ol>
+<h2 id="funciones">Funciones</h2>
+<h3 id="clima_ciudades_destino"><code>clima_ciudades_destino()</code></h3>
+<p>Esta función se encarga de obtener y mostrar los datos del clima de la ciudad de destino ingresada por el usuario. Los datos incluyen temperatura, presión, humedad, descripción del clima, amanecer y puesta de sol.</p>
+<p>```python
+def clima_ciudades_destino():
+    # ...
+    # Código de la función clima_ciudades_destino
+    # ...</p>
+<h3 id="ejemplo-de-uso">Ejemplo de Uso</h3>
+<p>```python</p>
+<h1 id="importar-los-modulos">Importar los módulos</h1>
+<p>import requests
+import hora
+import os 
+from leer_csv import *
+from time import timezone</p>
+<h1 id="definir-api_key-url-y-ciudad_dest">Definir api_key, url y ciudad_dest</h1>
+<p>if os.path.isfile("llave_api.txt"):
+    with open("llave_api.txt", "r") as archivo:
+        api_key = archivo.read().strip()
+else:
+    api_key = 'TU_LLAVE_API'
+url = "http://api.openweathermap.org/data/2.5/weather?"
+ciudad_dest = input("Ingresa la ciudad de destino: ")</p>
+<h1 id="realizar-una-solicitud-http-para-obtener-los-datos-del-clima">Realizar una solicitud HTTP para obtener los datos del clima</h1>
+<p>res1 = requests.get(url + "appid=" + api_key + "&amp;q=" + ciudad_dest)
+datos_ciudad2 = res1.json()</p>
+<h1 id="llamar-a-la-funcion-para-mostrar-el-clima-de-la-ciudad-de-destino">Llamar a la función para mostrar el clima de la ciudad de destino</h1>
+<p>clima_ciudades_destino()</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
