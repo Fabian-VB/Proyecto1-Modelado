@@ -1,9 +1,15 @@
-import requests, csv
+import requests, csv, os
 from leer_csv import *
 'Programa para proporcionar el clima de diferentes ciudades'
-api_key='2888b717c74741dc6365d7e88dc7ce9c'      #Llave proporcionada de OpenWeather.
+
+if os.path.isfile("llave_api.txt"):
+    with open("llave_api.txt", "r") as archivo: #Llave proporcionada de OpenWeather.
+        api_key = archivo.read().strip() #Lee la llave y elimina espacios en blanco
+else:
+    api_key = 'TU_LLAVE_API' #Si no se encuentra el archivo, usa la llave predeterminada
+
 url="http://api.openweathermap.org/data/2.5/weather?"   #url de OpenWeather para ingresar a los climas.
-ciudad = input("Ingresa la ciudad de origen: ")   #El usuario ingresa las ciudades que desea ver.
+ciudad = input("Ingresa la ciudad de origen: ") #El usuario ingresa las ciudades que desea ver.
 "Toma la ciudad proporcionada por el usuario y con ayuda de la api y url busca los datos pedidos."
 completa_url = url + "appid=" + api_key + "&q=" + ciudad
 res = requests.get(completa_url)
